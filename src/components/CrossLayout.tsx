@@ -1,5 +1,5 @@
-import { motion } from 'motion/react';
-import type { ReactNode } from 'react';
+import {motion} from 'motion/react';
+import type {ReactNode} from 'react';
 
 interface CrossLayoutProps {
   children: ReactNode;
@@ -36,12 +36,12 @@ function CrossLayout({ children }: CrossLayoutProps) {
           duration: ANIMATION_CONFIG.topBarDuration,
           ease: ANIMATION_CONFIG.lineEasing,
         }}
-        className="absolute top-[5%] left-[10%] w-[80%] h-[1px] bg-white"
+        className="absolute top-[5%] left-[8%] right-[8%] h-[1px] bg-white"
       />
 
       {/* Left bar */}
       <motion.div
-        className="absolute left-[5%] top-[10%] w-[1px] h-[80%] bg-white"
+        className="absolute left-[5%] top-[10%] w-[1px] bg-white"
         initial={{ height: 0 }}
         animate={{ height: '80%' }}
         transition={{
@@ -53,7 +53,7 @@ function CrossLayout({ children }: CrossLayoutProps) {
 
       {/* Right bar */}
       <motion.div
-        className="absolute right-[5%] top-[10%] w-[1px] h-[80%] bg-white"
+        className="absolute right-[5%] top-[10%] w-[1px] bg-white"
         initial={{ height: 0 }}
         animate={{ height: '80%' }}
         transition={{
@@ -72,12 +72,12 @@ function CrossLayout({ children }: CrossLayoutProps) {
           ease: ANIMATION_CONFIG.lineEasing,
           delay: ANIMATION_CONFIG.bottomBarsDelay,
         }}
-        className="absolute bottom-[5%] left-[10%] w-[40%] h-[1px] bg-white"
+        className="absolute bottom-[5%] left-[8%] h-[1px] bg-white"
       />
 
       {/* Bottom right bar */}
       <motion.div
-        className="absolute bottom-[5%] right-[10%] w-[40%] h-[1px] bg-white"
+        className="absolute bottom-[5%] right-[8%] h-[1px] bg-white"
         initial={{ width: 0 }}
         animate={{ width: '40%' }}
         transition={{
@@ -160,7 +160,7 @@ function CrossLayout({ children }: CrossLayoutProps) {
       </motion.div>
 
       {/* Content area - positioned between the four lines */}
-      <div className="absolute top-[10%] left-[10%] right-[10%] bottom-[10%] flex items-center justify-center overflow-auto">
+      <div className="absolute top-[10%] left-[8%] right-[8%] bottom-[10%] flex items-center justify-center overflow-auto">
         <div className="w-full h-full">{children}</div>
       </div>
     </div>
