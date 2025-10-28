@@ -160,7 +160,7 @@ function CrossLayout({ children }: CrossLayoutProps) {
       </motion.div>
 
       {/* Content area - positioned between the four lines */}
-      <div className="absolute top-[10%] left-[8%] right-[8%] bottom-[10%] flex items-center justify-center overflow-auto">
+      <div className="absolute top-[10%] left-[8%] right-[8%] bottom-[10%] flex items-center justify-center overflow-auto no-scrollbar">
         <div className="w-full h-full">{children}</div>
       </div>
     </div>
