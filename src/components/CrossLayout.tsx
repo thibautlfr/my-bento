@@ -36,7 +36,7 @@ function CrossLayout({ children }: CrossLayoutProps) {
           duration: ANIMATION_CONFIG.topBarDuration,
           ease: ANIMATION_CONFIG.lineEasing,
         }}
-        className="absolute top-[5%] left-[8%] right-[8%] h-[1px] bg-white"
+        className="absolute top-[5%] left-[12%] right-[12%] lg:left-[8%] lg:right-[8%] h-[1px] bg-white"
       />
 
       {/* Left bar */}
@@ -72,12 +72,12 @@ function CrossLayout({ children }: CrossLayoutProps) {
           ease: ANIMATION_CONFIG.lineEasing,
           delay: ANIMATION_CONFIG.bottomBarsDelay,
         }}
-        className="absolute bottom-[5%] left-[8%] h-[1px] bg-white"
+        className="absolute bottom-[5%] left-[12%] lg:left-[8%] h-[1px] bg-white"
       />
 
       {/* Bottom right bar */}
       <motion.div
-        className="absolute bottom-[5%] right-[8%] h-[1px] bg-white"
+        className="absolute bottom-[5%] right-[12%] lg:right-[8%] h-[1px] bg-white"
         initial={{ width: 0 }}
         animate={{ width: '40%' }}
         transition={{
@@ -160,7 +160,7 @@ function CrossLayout({ children }: CrossLayoutProps) {
       </motion.div>
 
       {/* Content area - positioned between the four lines */}
-      <div className="absolute top-[10%] left-[8%] right-[8%] bottom-[10%] flex items-center justify-center overflow-auto no-scrollbar">
+      <div className="absolute top-[10%] left-[12%] right-[12%] lg:left-[8%] lg:right-[8%] bottom-[10%] flex items-center justify-center overflow-auto no-scrollbar">
         <div className="w-full h-full">{children}</div>
       </div>
     </div>
