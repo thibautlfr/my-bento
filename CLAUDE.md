@@ -4,32 +4,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development Commands
 
+**IMPORTANT:** This project uses **pnpm** as the package manager. Always use `pnpm` instead of `npm`.
+
 **Development server:**
 ```bash
-npm run dev
+pnpm dev
 ```
 Starts Vite dev server with HMR at http://localhost:5173
 
 **Build:**
 ```bash
-npm run build
+pnpm build
 ```
 Compiles TypeScript and builds production bundle to `dist/`
 
 **Linting:**
 ```bash
-npm run lint          # Check for linting errors
+pnpm lint          # Check for linting errors
 ```
 
 **Formatting:**
 ```bash
-npm run format        # Format all files with Prettier
-npm run format:check  # Check formatting without modifying files
+pnpm format        # Format all files with Prettier
+pnpm format:check  # Check formatting without modifying files
 ```
 
 **Preview production build:**
 ```bash
-npm run preview
+pnpm preview
 ```
 
 ## Tech Stack
