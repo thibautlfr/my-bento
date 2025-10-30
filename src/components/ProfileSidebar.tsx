@@ -1,5 +1,5 @@
 export default function ProfileSidebar() {
-  {/* Top section - Profile info */}
+  /* Top section - Profile info */
   return (
     <div className="flex flex-col gap-8 h-full text-white">
       {/* Avatar */}
@@ -17,7 +17,7 @@ export default function ProfileSidebar() {
       {/* Name and title */}
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl font-bold">Thibaut Lefrançois</h1>
-        <p className="text-xl text-neutral-400">
+        <p className="text-xl text-neutral-400 italic">
           Creative Developer - The art of shaping digital
         </p>
       </div>
