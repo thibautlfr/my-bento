@@ -1,5 +1,35 @@
 @import 'tailwindcss';
 
+@font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("assets/fonts/CabinetGrotesk/CabinetGrotesk-Variable.woff2");
+}
+
+@font-face {
+    font-family: "Satoshi Variable";
+    src: url("assets/fonts/Satoshi/Satoshi-Variable.woff2");
+}
+
+@font-face {
+    font-family: "Satoshi Variable Italic";
+    src: url("assets/fonts/Satoshi/Satoshi-VariableItalic.woff2");
+}
+
 @utility no-scrollbar {
     @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
+@theme {
+    --font-sans: 'Satoshi Variable', system-ui, sans-serif;
+    --font-display: 'Cabinet Grotesk', system-ui, sans-serif;
+}
+
+/* Apply Cabinet Grotesk to all headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), sans-serif;
+}
+
+/* Apply Satoshi to body text */
+body {
+    font-family: var(--font-sans), sans-serif;
 }
