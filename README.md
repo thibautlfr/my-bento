@@ -1,73 +1,120 @@
-# React + TypeScript + Vite
+# My Bento
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive personal portfolio combining a digital identity card and creative experimentation space, inspired by
+bento.me. Built with modern web technologies and featuring a unique "bento grid" layout with animated cards.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+My Bento showcases professional work, personal projects, and creative experiments through four main sections organized
+in an intuitive grid layout. The centerpiece is the **Lab** — an experimental creative space featuring advanced
+animations, shaders, 3D experiences, and artistic explorations.
 
-## React Compiler
+**Target audience:** Recruiters, potential clients, and the creative developer community.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Features
 
-## Expanding the ESLint configuration
+### Four Main Sections
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Socials** - Social media links, professional profiles (GitHub, LinkedIn), and contact methods
+2. **Projects** - Personal projects, enterprise work, case studies, and demos
+3. **Studies** - Academic/professional background, learning journey, and tech stack
+4. **Lab** - Experimental creative space featuring:
+    - Mini creative projects
+    - Advanced animations and transitions
+    - Shaders and visual effects
+    - 3D experiences
+    - Artistic and technical explorations
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Design Highlights
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Bento Grid Layout** - Animated card grid system with intuitive navigation
+- **Advanced Interactivity** - Smooth transitions and polished animations throughout
+- **Modern Aesthetic** - Balance between professionalism and creativity
+- **Performance Optimized** - Lazy loading, code splitting, and smart preloading
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## Tech Stack
+
+- **React 19** with TypeScript
+- **Vite** - Build tool with SWC for Fast Refresh
+- **Tailwind CSS v4** - Utility-first CSS with Vite plugin
+- **Motion** (v12) - Animation library for smooth transitions
+- **GSAP** - Advanced animation capabilities
+- **ESLint + Prettier** - Code quality and formatting
+
+## Getting Started
+
+### Prerequisites
+
+This project uses **pnpm** as the package manager. Make sure you have it installed:
+
+```bash
+npm install -g pnpm
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+```bash
+# Clone the repository
+git clone https://github.com/thibautlfr/my-bento.git
+cd my-bento
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+# Install dependencies
+pnpm install
 ```
+
+### Development
+
+Start the development server with HMR at http://localhost:5173:
+
+```bash
+pnpm dev
+```
+
+### Build
+
+Compile TypeScript and build production bundle to `dist/`:
+
+```bash
+pnpm build
+```
+
+### Preview Production Build
+
+```bash
+pnpm preview
+```
+
+### Code Quality
+
+```bash
+# Check for linting errors
+pnpm lint
+
+# Format all files with Prettier
+pnpm format
+
+# Check formatting without modifying files
+pnpm format:check
+```
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable React components
+│   ├── features/   # Feature-specific components
+│   ├── layout/     # Layout components
+│   └── ui/         # UI components
+├── pages/          # Main pages (Home, Lab, etc.)
+├── data/           # Data files (Lab experiments, projects, etc.)
+├── types/          # TypeScript type definitions
+├── styles/         # Custom styles
+└── assets/         # Images, videos, resources
+```
+
+## Project Philosophy
+
+My Bento is not just a portfolio — it's a living space that evolves with skills and creativity. The Lab in particular
+reflects technical curiosity and willingness to explore the boundaries of creative web development.
+
+Each section tells a story and creates a memorable experience for visitors.

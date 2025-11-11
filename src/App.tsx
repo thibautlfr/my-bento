@@ -1,7 +1,7 @@
-import CrossLayout from './components/CrossLayout';
-import SplitLayout from './components/SplitLayout';
-import ProfileSidebar from './components/ProfileSidebar';
-import Home from './pages/Home';
+import CrossLayout from '@/components/layout/CrossLayout';
+import SplitLayout from '@/components/layout/SplitLayout';
+import ProfileSidebar from '@/components/features/ProfileSidebar';
+import Home from '@/pages/Home';
 
 function App() {
   return (
