@@ -1,0 +1,20 @@
+[
+  {
+    "name": "@username",
+    "url": "https://github.com/username",
+    "icon": "github",
+    "description": "My code"
+  },
+  {
+    "name": "@username",
+    "url": "https://linkedin.com/in/username",
+    "icon": "linkedin",
+    "description": "Professional profile"
+  },
+  {
+    "name": "@username",
+    "url": "https://figma.com/@username",
+    "icon": "figma",
+    "description": "My designs :)"
+  }
+]

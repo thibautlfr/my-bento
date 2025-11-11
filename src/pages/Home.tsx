@@ -1,4 +1,13 @@
+import BentoCard from '@/components/features/BentoCard';
+import type { Social, Project, Studies } from '@/types';
+import socialsData from '@/data/socials.json';
+import projectsData from '@/data/projects.json';
+import studiesData from '@/data/studies.json';
+
 function Home() {
+  const socials: Social[] = socialsData;
+  const projects: Project[] = projectsData;
+  const studies: Studies[] = studiesData;
   return (
     <div className="flex flex-col text-white">
       {/* Header */}
@@ -9,37 +18,54 @@ function Home() {
         </p>
       </div>
 
-      {/* Bento Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12">
-        <div className="bg-neutral-700/50 rounded-lg p-8 backdrop-blur-sm border border-neutral-600 hover:border-neutral-500 transition-colors">
-          <h2 className="text-2xl font-semibold mb-2">Socials</h2>
-          <p className="text-neutral-400">Connect with me</p>
+      {/* Socials Section */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold mb-6">Socials</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {socials.map((social, index) => (
+            <BentoCard
+              key={index}
+              title={social.name}
+              description={social.description}
+              url={social.url}
+              icon={social.icon}
+              tags={[]}
+            />
+          ))}
         </div>
-        <div className="bg-neutral-700/50 rounded-lg p-8 backdrop-blur-sm border border-neutral-600 hover:border-neutral-500 transition-colors">
-          <h2 className="text-2xl font-semibold mb-2">Projects</h2>
-          <p className="text-neutral-400">My work</p>
-        </div>
-        <div className="bg-neutral-700/50 rounded-lg p-8 backdrop-blur-sm border border-neutral-600 hover:border-neutral-500 transition-colors">
-          <h2 className="text-2xl font-semibold mb-2">Studies</h2>
-          <p className="text-neutral-400">My journey</p>
-        </div>
-        <div className="bg-neutral-700/50 rounded-lg p-8 backdrop-blur-sm border border-neutral-600 hover:border-neutral-500 transition-colors">
-          <h2 className="text-2xl font-semibold mb-2">Lab</h2>
-          <p className="text-neutral-400">Creative experiments</p>
-        </div>
-      </div>
+      </section>
 
-      {/* Placeholder content to demonstrate scrolling */}
-      <div className="space-y-6 pb-12">
-        <div className="bg-neutral-700/30 rounded-lg p-6 border border-neutral-700">
-          <h3 className="text-lg font-semibold mb-2">Featured Project</h3>
-          <p className="text-neutral-400">Coming soon...</p>
+      {/* Projects Section */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold mb-6">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <BentoCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              url={project.url}
+            />
+          ))}
         </div>
-        <div className="bg-neutral-700/30 rounded-lg p-6 border border-neutral-700">
-          <h3 className="text-lg font-semibold mb-2">Latest Experiment</h3>
-          <p className="text-neutral-400">Coming soon...</p>
+      </section>
+
+      {/* Studies Section */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold mb-6">Studies</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {studies.map((study, index) => (
+            <BentoCard
+              key={index}
+              title={study.title}
+              description={study.description}
+              tags={study.tags}
+              url={study.url}
+            />
+          ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }
