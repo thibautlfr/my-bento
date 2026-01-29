@@ -24,7 +24,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
 
 // eslint-disable-next-line react-refresh/only-export-components
 function Content({ children }: { children: React.ReactNode }) {
-  return <main className="flex min-h-[80vh] w-full flex-col">{children}</main>;
+  return <main className="flex min-h-[70vh] w-full flex-col">{children}</main>;
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
