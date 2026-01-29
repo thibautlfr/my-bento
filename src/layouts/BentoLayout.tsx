@@ -52,7 +52,7 @@ function Footer({ children }: { children: React.ReactNode }) {
     <>
       {/* Desktop */}
       <div
-        className={`fixed bottom-0 mb-16 ml-16 hidden h-[80px] w-[350px] p-4 lg:flex ${isDebug ? 'bg-yellow-200' : ''}`}
+        className={`fixed bottom-0 mb-16 ml-16 hidden h-[80px] w-[350px] items-center justify-center p-4 lg:flex ${isDebug ? 'bg-yellow-200' : ''}`}
       >
         {children}
       </div>
