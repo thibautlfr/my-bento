@@ -1,9 +1,22 @@
+import { BentoLayout } from './layouts/BentoLayout.tsx';
+import BentoGrid from './features/bento-grid/BentoGrid.tsx';
+import Sidebar from './features/sidebar/Sidebar.tsx';
+import Footer from './features/footer/Footer.tsx';
+
 function App() {
   return (
     <>
-      <div className="flex w-screen h-screen justify-center items-center bg-gray-800">
-        <h1 className="text-3xl text-gray-300">My Bento - @thibautlfr</h1>
-      </div>
+      <BentoLayout.Root>
+        <BentoLayout.Sidebar>
+          <Sidebar />
+        </BentoLayout.Sidebar>
+        <BentoLayout.Content>
+          <BentoGrid />
+        </BentoLayout.Content>
+      </BentoLayout.Root>
+      <BentoLayout.Footer>
+        <Footer />
+      </BentoLayout.Footer>
     </>
   );
 }
