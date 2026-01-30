@@ -29,15 +29,14 @@ export default function Sidebar() {
       </h1>
 
       <div className="flex flex-col text-lg font-light tracking-tight text-balance">
-        <p>
-          <span className="font-medium">Creative dev</span> :{' '}
-          <span className="italic">Arko (freelancer)</span>
+        <p className="flex items-center">
+          <span className="font-medium">Creative dev</span> : Arko (freelancer)
         </p>
         <p>
           <span className="font-medium">Full-stack dev</span> : Raccourci Agency
         </p>
         <p>
-          <span className="font-medium">Passionate player</span> : @Frozway
+          <span className="font-medium">Passionate player</span> : Frozway
         </p>
       </div>
     </>

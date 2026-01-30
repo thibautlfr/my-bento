@@ -52,7 +52,7 @@ function Footer({ children }: { children: React.ReactNode }) {
     <>
       {/* Desktop */}
       <div
-        className={`fixed bottom-0 mb-16 ml-16 hidden h-[80px] w-[350px] items-center justify-center p-4 lg:flex ${isDebug ? 'bg-yellow-200' : ''}`}
+        className={`fixed bottom-0 mb-16 ml-16 hidden h-[80px] w-[350px] items-center rounded-xl border-2 p-4 lg:flex ${isDebug ? 'bg-yellow-200' : ''}`}
       >
         {children}
       </div>
@@ -63,7 +63,7 @@ function Footer({ children }: { children: React.ReactNode }) {
       >
         {/* (max-w container - padding) -> 428-48 and 48 is for (p-6*2) since p-6 of tailwind is 24px */}
         <div
-          className={`flex w-full max-w-[calc(428px-48px)] justify-center p-4 text-center ${isDebug ? 'bg-yellow-300' : ''}`}
+          className={`flex w-full max-w-[calc(428px-48px)] p-4 text-center ${isDebug ? 'bg-yellow-300' : ''}`}
         >
           {children}
         </div>
