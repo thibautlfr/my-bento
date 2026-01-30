@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Fontshare - Satoshi (body) & Cabinet Grotesk (headings) */
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=cabinet-grotesk@400,500,700,800&display=swap");
+
 @custom-variant dark (&:is(.dark *));
 
 body {
@@ -8,6 +11,8 @@ body {
 }
 
 @theme inline {
+    --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+    --font-heading: "Cabinet Grotesk", ui-sans-serif, system-ui, sans-serif;
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
@@ -122,6 +127,9 @@ body {
     @apply border-border outline-ring/50;
     }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
     }
 }

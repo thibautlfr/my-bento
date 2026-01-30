@@ -23,7 +23,22 @@ export default function Sidebar() {
         <AvatarFallback>TL</AvatarFallback>
         <AvatarBadge className={statusColors[status]} />
       </Avatar>
-      <div>Bio</div>
+
+      <h1 className="text-4xl font-bold tracking-tight text-balance">
+        Thibaut LEFRANCOIS
+      </h1>
+
+      <div className="flex flex-col text-lg font-light tracking-tight text-balance">
+        <p className="flex items-center">
+          <span className="font-medium">Creative dev</span> : Arko (freelancer)
+        </p>
+        <p>
+          <span className="font-medium">Full-stack dev</span> : Raccourci Agency
+        </p>
+        <p>
+          <span className="font-medium">Passionate player</span> : Frozway
+        </p>
+      </div>
     </>
   );
 }
