@@ -24,7 +24,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
     // height viewport - 208px
     // 208 = padding top (64px) + padding bottom (64px) + footer height (80px)
     <aside
-      className={`flex flex-col lg:sticky lg:top-16 lg:h-[calc(100vh-208px)] ${isDebug ? 'bg-blue-200' : ''}`}
+      className={`flex flex-col space-y-6 lg:sticky lg:top-16 lg:h-[calc(100vh-208px)] ${isDebug ? 'bg-blue-200' : ''}`}
     >
       {children}
     </aside>
