@@ -8,10 +8,10 @@ const bentoCardVariants = cva(
     variants: {
       size: {
         default: 'w-[175px] h-[175px]',
-        sm: 'w-[390px] h-[67.5px]',
-        'md-w': 'w-[390px] h-[175px]',
-        'md-h': 'w-[175px] h-[390px]',
-        xl: 'h-[390px] w-[390px]',
+        sm: 'w-[374px] h-[67.5px]',
+        'md-w': 'w-[374px] h-[175px]',
+        'md-h': 'w-[175px] h-[374px]',
+        xl: 'h-[374px] w-[374px]',
       },
     },
     defaultVariants: {
@@ -26,21 +26,53 @@ export default function BentoCard({
   children,
   href,
   icon,
+  image,
   ...props
 }: React.ComponentProps<'a'> &
   VariantProps<typeof bentoCardVariants> & {
     icon?: React.ReactNode;
+    image?: string;
   }) {
-  const Comp = href ? 'a' : 'div';
+  if (size === 'md-w' && image) {
+    const classes = cn(bentoCardVariants({ size }), "flex-row! gap-4 transition-opacity", href && "hover:opacity-80", className);
+    const content = (
+      <>
+        <div className="w-[50%] flex flex-col justify-between space-y-2">
+          {icon && (
+            <div className="h-10 w-10 rounded-lg border p-2">{icon}</div>
+          )}
+          <div>
+            <p className="font-light tracking-tight text-balance">
+              {children}
+            </p>
+          </div>
+        </div>
+        <div className="w-[50%] overflow-hidden rounded-lg border bg-blue-200">
+          <img
+            src={image}
+            alt=""
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </>
+    );
 
-  return (
-    <Comp
-      href={href}
-      className={cn(bentoCardVariants({ size }), className)}
-      {...props}
-    >
+    return href ? (
+      <a href={href} className={classes} {...(props as any)}>
+        {content}
+      </a>
+    ) : (
+      <div className={classes} {...(props as any)}>
+        {content}
+      </div>
+    );
+  }
+
+  const classes = cn(bentoCardVariants({ size }), className);
+  const content = (
+    <>
       {icon && (
-        <div className="h-[40px] w-[40px] rounded-lg border p-2">{icon}</div>
+        <div className="h-10 w-10 rounded-lg border p-2">{icon}</div>
       )}
       <p className="line line-clamp-2 text-sm/5 font-light tracking-tight">
         {children}
@@ -50,6 +82,16 @@ export default function BentoCard({
           Follow
         </Button>
       )}
-    </Comp>
+    </>
+  );
+
+  return href ? (
+    <a href={href} className={classes} {...(props as any)}>
+      {content}
+    </a>
+  ) : (
+    <div className={classes} {...(props as any)}>
+      {content}
+    </div>
   );
 }
