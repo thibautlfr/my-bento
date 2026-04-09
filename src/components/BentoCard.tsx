@@ -27,11 +27,13 @@ export default function BentoCard({
   href,
   icon,
   image,
+  buttonText = 'Follow',
   ...props
 }: React.ComponentProps<'a'> &
   VariantProps<typeof bentoCardVariants> & {
     icon?: React.ReactNode;
     image?: string;
+    buttonText?: string;
   }) {
   if (size === 'md-w' && image) {
     const classes = cn(bentoCardVariants({ size }), "flex-row! gap-4 transition-opacity", href && "hover:opacity-80", className);
@@ -79,7 +81,7 @@ export default function BentoCard({
       </p>
       {icon && size === 'default' && (
         <Button className="w-[75%]" size="sm" variant="outline">
-          Follow
+          {buttonText}
         </Button>
       )}
     </>
