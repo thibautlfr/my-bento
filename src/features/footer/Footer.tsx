@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className="flex w-full justify-center italic">
       <h1>
-        Open source portfolio available on&nbsp;
+        Made with ❤️ available on&nbsp;
         <SocialLink
           href="https://github.com/thibautlfr/my-bento"
           label="GitHub"

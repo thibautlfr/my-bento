@@ -29,7 +29,7 @@ export default function Sidebar() {
       </h1>
 
       <div className="flex flex-col text-lg font-light tracking-tight text-balance">
-        <p className="flex items-center">
+        <p>
           <span className="font-medium">Creative dev</span> : Arko (freelancer)
         </p>
         <p>
