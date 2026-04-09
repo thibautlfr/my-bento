@@ -8,7 +8,7 @@ function Root({ children }: { children: React.ReactNode }) {
   return (
     // In mobile, we want the main container height to be height viewport - footer
     <div
-      className={`mx-auto flex w-full max-w-[428px] flex-col gap-6 p-6 lg:mx-0 lg:grid lg:min-h-screen lg:max-w-none lg:grid-cols-[350px_1fr] lg:gap-20 lg:p-16 ${isDebug ? 'bg-red-200' : ''}`}
+      className={`mx-auto flex w-full max-w-[428px] flex-col gap-6 p-6 lg:mx-0 lg:grid lg:min-h-screen lg:max-w-none lg:grid-cols-[400px_1fr] lg:gap-20 lg:p-16 ${isDebug ? 'bg-red-200' : ''}`}
     >
       {children}
     </div>
@@ -37,7 +37,7 @@ function Content({ children }: { children: React.ReactNode }) {
 
   return (
     <main
-      className={`flex min-h-[70vh] w-full flex-col ${isDebug ? 'bg-green-200' : ''}`}
+      className={`mx-auto flex min-h-[70vh] w-full max-w-[772px] flex-col ${isDebug ? 'bg-green-200' : ''}`}
     >
       {children}
     </main>
@@ -52,7 +52,7 @@ function Footer({ children }: { children: React.ReactNode }) {
     <>
       {/* Desktop */}
       <div
-        className={`fixed bottom-0 mb-16 ml-16 hidden h-[80px] w-[350px] items-center rounded-xl border-2 p-4 lg:flex ${isDebug ? 'bg-yellow-200' : ''}`}
+        className={`fixed bottom-0 mb-16 ml-16 hidden h-[80px] w-[400px] items-center rounded-xl border-2 p-4 lg:flex ${isDebug ? 'bg-yellow-200' : ''}`}
       >
         {children}
       </div>
