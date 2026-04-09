@@ -61,7 +61,7 @@ export default function BentoGrid() {
           </BentoCard>
 
           <BentoCard
-            href="https://www.linkedin.com/in/thibaut-lefrancois/"
+            href="https://x.com/thibautlfr"
             icon={<SiX strokeWidth="1.5" />}
           >
             Let's chat !

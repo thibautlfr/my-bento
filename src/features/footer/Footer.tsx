@@ -3,7 +3,7 @@ import { SocialLink } from '@/components/SocialLink.tsx';
 export default function Footer() {
   return (
     <div className="flex w-full justify-center italic">
-      <h1>
+      <p>
         Made with ❤️ available on&nbsp;
         <SocialLink
           href="https://github.com/thibautlfr/my-bento"
@@ -11,7 +11,7 @@ export default function Footer() {
         >
           GitHub
         </SocialLink>
-      </h1>
+      </p>
     </div>
   );
 }

@@ -36,7 +36,7 @@ export default function BentoCard({
     buttonText?: string;
   }) {
   if (size === 'md-w' && image) {
-    const classes = cn(bentoCardVariants({ size }), "flex-row! gap-4 transition-opacity", href && "hover:opacity-80", className);
+    const classes = cn(bentoCardVariants({ size }), "!flex-row gap-4 transition-opacity", href && "hover:opacity-80", className);
     const content = (
       <>
         <div className="w-[50%] flex flex-col justify-between space-y-2">
@@ -76,7 +76,7 @@ export default function BentoCard({
       {icon && (
         <div className="h-10 w-10 rounded-lg border p-2">{icon}</div>
       )}
-      <p className="line line-clamp-2 text-sm/5 font-light tracking-tight">
+      <p className="line-clamp-2 text-sm/5 font-light tracking-tight">
         {children}
       </p>
       {icon && size === 'default' && (
