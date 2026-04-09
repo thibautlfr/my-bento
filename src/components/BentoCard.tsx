@@ -7,11 +7,11 @@ const bentoCardVariants = cva(
   {
     variants: {
       size: {
-        default: 'w-[175px] h-[175px]',
-        sm: 'w-[374px] h-[67.5px]',
-        'md-w': 'w-[374px] h-[175px]',
-        'md-h': 'w-[175px] h-[374px]',
-        xl: 'h-[374px] w-[374px]',
+        default: 'w-[175px] h-[175px] max-w-[calc(50%-12px)] sm:max-w-none',
+        sm: 'w-[175px] h-[67.5px] max-w-[calc(50%-12px)] sm:max-w-none',
+        'md-w': 'w-[374px] h-[175px] max-w-full',
+        'md-h': 'w-[175px] h-[374px] max-w-[calc(50%-12px)] sm:max-w-none',
+        xl: 'h-[374px] w-[374px] max-w-full',
       },
     },
     defaultVariants: {
