@@ -1,0 +1,47 @@
+{
+  "id": "projects",
+  "title": "Some projects",
+  "items": [
+    {
+      "id": "youbook",
+      "href": "https://www.marseille-tourisme.com/experience/",
+      "size": "md-w",
+      "imageId": "youbookMarseilleImg",
+      "iconId": "Globe",
+      "children": "Youbook - Marseille"
+    },
+    {
+      "id": "ocean",
+      "href": "https://ocean-heartbeat.netlify.app/",
+      "size": "md-w",
+      "imageId": "oceanHeartbeatImg",
+      "iconId": "FishIcon",
+      "children": "Ocean Heartbeat"
+    },
+    {
+      "id": "ragingsea",
+      "href": "https://ragingsea-experience.netlify.app/",
+      "size": "md-w",
+      "imageId": "ragingSeaImg",
+      "iconId": "Waves",
+      "children": "Raging sea"
+    },
+    {
+      "id": "trinity",
+      "href": "https://thibautlfr-exp001.netlify.app/",
+      "size": "md-w",
+      "imageId": "trinityExpImg",
+      "iconId": "Music",
+      "children": "Trinity experience"
+    },
+    {
+      "id": "galaxy",
+      "href": "https://galaxy-configurator.netlify.app/",
+      "size": "md-w",
+      "imageId": "galaxyConfiguratorImg",
+      "iconId": "Star",
+      "children": "Galaxy configurator"
+    }
+  ]
+}
+
