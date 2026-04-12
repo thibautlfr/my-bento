@@ -8,6 +8,9 @@ import BentoCard from '@/components/BentoCard.tsx';
 import BentoSection from '@/components/BentoSection.tsx';
 import type { BentoSectionData } from '@/types/bento.ts';
 
+const networksSectionData: BentoSectionData = networksData;
+const projectsSectionData: BentoSectionData = projectsData;
+
 export default function BentoGrid() {
   return (
     <>
@@ -23,8 +26,8 @@ export default function BentoGrid() {
           </BentoCard>
         </section>
 
-        <BentoSection data={networksData as BentoSectionData} />
-        <BentoSection data={projectsData as BentoSectionData} />
+        <BentoSection data={networksSectionData} />
+        <BentoSection data={projectsSectionData} />
       </div>
     </>
   );
