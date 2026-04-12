@@ -1,0 +1,33 @@
+{
+  "id": "networks",
+  "title": "Social networks",
+  "items": [
+    {
+      "id": "linkedin",
+      "href": "https://www.linkedin.com/in/thibaut-lefrancois/",
+      "iconId": "LucideLinkedin",
+      "children": "Let's connect !"
+    },
+    {
+      "id": "github",
+      "href": "https://github.com/thibautlfr",
+      "iconId": "SiGithub",
+      "buttonText": "Discover",
+      "children": "IT projects"
+    },
+    {
+      "id": "figma",
+      "href": "https://www.figma.com/@thibautlfr",
+      "iconId": "SiFigma",
+      "buttonText": "Explore",
+      "children": "My designs"
+    },
+    {
+      "id": "x",
+      "href": "https://x.com/thibautlfr",
+      "iconId": "SiX",
+      "children": "Let's chat !"
+    }
+  ]
+}
+
