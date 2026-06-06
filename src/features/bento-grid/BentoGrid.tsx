@@ -1,5 +1,6 @@
 import thibautlfrImg from '@/assets/thibautlfr.webp';
 import youbookMarseilleImg from '@/assets/projects/youbook_marseille.webp';
+import research001Img from '@/assets/projects/research001.webp';
 import oceanHeartbeatImg from '@/assets/projects/ocean_heartbeat.webp';
 import trinityExpImg from '@/assets/projects/trinity_exp.webp';
 import galaxyConfiguratorImg from '@/assets/projects/galaxy_configurator.webp';
@@ -14,7 +15,12 @@ import {
   Star,
   Waves,
 } from 'lucide-react';
-import { SiFigma, SiGithub, SiX } from '@icons-pack/react-simple-icons';
+import {
+  SiFigma,
+  SiGithub,
+  SiRoundcube,
+  SiX,
+} from '@icons-pack/react-simple-icons';
 import BentoCard from '@/components/BentoCard.tsx';
 
 export default function BentoGrid() {
@@ -73,6 +79,15 @@ export default function BentoGrid() {
         </h2>
 
         <section className="flex flex-row flex-wrap gap-6">
+          <BentoCard
+            href="https://thibautlfr.github.io/3d-carousel/"
+            size="md-w"
+            image={research001Img}
+            icon={<SiRoundcube strokeWidth="1.5" />}
+          >
+            Research - Chromatic aberration
+          </BentoCard>
+
           <BentoCard
             href="https://www.marseille-tourisme.com/experience/"
             size="md-w"
